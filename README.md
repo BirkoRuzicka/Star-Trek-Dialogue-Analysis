@@ -320,16 +320,16 @@ plt.show()
 
 <br>
 
-<img src='images/tos_characters_time.png' width=450px> &emsp;&emsp;
-<img src='images/voy_characters_time.png' width=450px>
+<img src='images/tos_characters_time.png' width=400px> &emsp;&emsp;
+<img src='images/voy_characters_time.png' width=400px>
         
 
 <br>
 The method for finding the gender ratio for lines is analogous and results in this:
 <br><br>
 
-<img src='images/tos_lines_time.png' width=450px> &emsp;&emsp;
-<img src='images/voy_lines_time.png' width=450px>
+<img src='images/tos_lines_time.png' width=400px> &emsp;&emsp;
+<img src='images/voy_lines_time.png' width=400px>
         
 
 <br>
