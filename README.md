@@ -34,9 +34,9 @@ These are the series I included in the study:
 The main steps in this analysis were:
 
 1. collecting and preparing the data ([go there](#part1))
-2. bringing in additional, manually prepared metadata
-3. analysis of gender in individual series
-4. analysis of gender across all series with time
+2. bringing in additional, manually prepared metadata ([go there](#part2))
+3. analysis of gender in individual series ([go there](#part3))
+4. analysis of gender across all series with time ([go there](#part4))
 
 <br>
 
@@ -70,7 +70,10 @@ tos_df = pd.Series.to_frame(tos_series).reset_index()
 tos_df.columns = ['Episode', 'Character', 'Lines']
 ```
 
-This dataframe now contains every line ever spoken on "TOS", so in the next step I removed all entries for 'minor characters' who have less than 10 lines of dialogue per episode. This reduces noise and lowers the overall workload in the next step.
+<br>
+The dataframe now contains every line ever spoken on "TOS", so in the next step I removed all entries for 'minor characters' who have less than 10 lines of dialogue per episode. This reduces noise and lowers the overall workload in the next step.
+<br>
+<br>
 
 ```python
 # create additional column in the dataframe to show a character's linecount per episode
@@ -84,6 +87,7 @@ for index in tos_df.index:
 <br>
 
 ## 2. Additional metadata
+<a id="part2"></a>
 
 In addition to the information on episode number, character name, and lines spoken by the character, I needed the following additional metadata for the episodes and characters:
 
@@ -92,13 +96,7 @@ In addition to the information on episode number, character name, and lines spok
 * **episode title** for personal orientation within the series
 * **character gender**
 
-The first three items were easily extracted from Wikipedia (and saved in a CSV file for later use), but the characters' gender had to be assessed manually. Working from a list of unique character names of the series 
-
-```python
-tos_df['Character'].unique()
-```
-
-I cross-referenced the fandom encyclopedia [Memory Alpha](https://memory-alpha.fandom.com/), my memory, and in some inconclusive cases even the episode's video itself, to compile a CSV file of the gender for each character with at least 10 lines in the respective episode. 
+The first three items were easily extracted from Wikipedia (and saved in a CSV file for later use), but the characters' gender had to be assessed manually. Working from a list of unique character names of the series (`tos_df['Character'].unique()`), I cross-referenced the fandom encyclopedia [Memory Alpha](https://memory-alpha.fandom.com/), my memory, and in some inconclusive cases even the episode's video itself, to compile a CSV file of the gender(\*) for each character with at least 10 lines in the respective episode. 
 
 To illustrate the scale of this endeavour:
 
@@ -106,9 +104,9 @@ To illustrate the scale of this endeavour:
 |---             |---|---|---|---|---|---|---|---|
 |character count |229| 49|419|362|385|211| 74| 33|
 
-<br><br>
-
-***A note on "gender" in this study***
+<br>
+___
+***\* A note on "gender" in this study***
 
 *Rarely in Star Trek is a character's gender explicitly stated on screen, except for episodes that expressly deal with gender. Notable examples of such episodes include "The Outcast" (TNG, season 5, episode 17) and "Cogenitor" (ENT, season 2, episode 22). Much could and should be said about gender expression in Star Trek, but that is not the scope of this project. If anyone reading this feels the calling to expand on this further, I fiercely encourage you to get in touch with me!*
 
@@ -119,6 +117,7 @@ To illustrate the scale of this endeavour:
 *- the Voyager's "Emergency Medical Hologram" is a non-corporeal computer program, so it is not "alive" and does not have a gender in the conventional sense. But it is generally referred to as "he", the crew members treat it as a person, and we come to understand throughout the plot that it is evolving self-awareness as a male person. I therefore classified this character as male*
 
 *- Next Generation's "Data" is an android, whose outward gender expression is distinctly male. Furthermore, Data is consistently portrayed as self-aware and is shown to understand himself as male, so I classified him as male*
+___
 
 <br>
 
@@ -143,14 +142,271 @@ tos_df = tos_df[['Episode', 'Season', 'Year', 'Title', 'Character', 'Gender', 'L
 
 <br>
 
+## 3. Analysis of individual series
+<a id="part3"></a>
 
+First, I looked at the gender ratio of the individual series, both in total as well as broken down by season.
 
+### Characters per gender, whole series
 
+I began by counting the unique characters per gender for each series. The following code runs through the series' dataframe row by row, sorting the row's field for "Character" into a dictionary depending on the row's field for "Gender". Then I counted the unique entries in each list, because the main cast and several recurring characters appear in multiple episodes.
 
+(Note: there are other ways to achieve the same goal, e.g. using `df.groupby(['Gender'])`, but my brain found this approach the easiest to follow)
 
+```python
+dataframe = tos_df
+characters_gender = {'m': [], 'f': [], 'n': []}
 
+for i in dataframe.index:
+    if dataframe['Gender'][i] == 'm':
+        char_gender['m'].append(dataframe['Character'][i])
+    elif dataframe['Gender'][i] == 'f':
+        char_gender['f'].append(dataframe['Character'][i])
+    elif dataframe['Gender'][i] == 'n':
+        char_gender['n'].append(dataframe['Character'][i])
 
+char_m = len(np.unique(char_gender['m']))
+char_f = len(np.unique(char_gender['f']))
+char_n = len(np.unique(char_gender['n']))
+```
 
+<br>
+I visualized the results in a pie chart:
+<br><br>
+
+```python
+plt.pie([char_m, char_f, char_n],
+        labels=['male', 'female', 'genderneutral'],
+        shadow=False,
+        startangle=90,
+        autopct='%1.0f%%',
+        colors=['#0471CE', '#E52222', '#BBBBBB'])
+```
+
+<br>
+Some results:
+<br><br>
+
+<table>
+    <tr>
+        <td>
+            <img src='https://raw.githubusercontent.com/BirkoRuzicka/blob/main/images/tos_characters2.png', width=300>
+        </td>
+        <td>
+            <img src='https://raw.githubusercontent.com/BirkoRuzicka/blob/main/images/voy_characters2.png', width=300>
+        </td>
+    </tr>
+</table>
+
+<br>
+
+...wait. So the ratio of female characters is actually **lower** in VOY, a show with a female captain, aired 30 years after TOS? That does not look like progress yet.
+<br><br>
+
+### Lines by gender, whole series
+
+Let's see how much characters of each gender get to say in each show though. For this I once again run through the dataframe row by row, and add the field for "Linecount" to a dictionary depending on the row's field "Gender":<br>
+
+```python
+lines_by_gender = defaultdict(np.int64)
+for i in dataframe.index:
+    lines_by_gender[dataframe['Gender'][i]] += dataframe['Linecount'][i]   
+        
+# pie chart
+plt.pie([lines_by_gender['m'], lines_by_gender['f'], lines_by_gender['n']],
+        labels=['male', 'female', 'genderneutral'],
+        shadow=False, 
+        startangle=90,
+        autopct='%1.0f%%',
+        colors=['#0471CE', '#E52222', '#BBBBBB'])
+```
+
+<br>
+The resulting pie charts:
+<br><br>
+
+<table>
+    <tr>
+        <td>
+            <img src='https://raw.githubusercontent.com/BirkoRuzicka/blob/main/images/tos_lines2.png', width=300>
+        </td>
+        <td>
+            <img src='https://raw.githubusercontent.com/BirkoRuzicka/blob/main/images/voy_lines2.png', width=300>
+        </td>
+    </tr>
+</table>
+
+<br>
+Okay, some improvement there.
+<br>
+
+### Most loquacious characters
+<br>
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;**TOS:** &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;**VOY:**
+
+        
+|character|lines overall|gender|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|character|lines overall|gender|
+|:--------|------------:|-----:|------------------------------------|:--------|------------:|-----:|
+|KIRK     |  9074       |    m |&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|JANEWAY  | 11717       | **f**|
+|SPOCK    |  4580       |    m |&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|EMH      |  5713       |    m |
+|MCCOY    |  2552       |    m |&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|CHAKOTAY |  5702       |    m |
+|SCOTT    |  1378       |    m |&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|PARIS    |  5110       |    m |
+|SULU     |   785       |    m |&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|TUVOK    |  4681       |    m |
+|UHURA    |   751       | **f**|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|KIM      |  4489       |    m |
+|CHEKOV   |   474       |    m |&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|TORRES   |  4483       | **f**|
+|PIKE     |   222       |    m |&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|SEVEN    |  4143       | **f**|
+|CHAPEL   |   194       | **f**|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|NEELIX   |  3297       |    m |
+|MUDD     |   150       |    m |&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|KES      |  1273       | **f**|
+    
+<br>
+From this we see that in the their respective "Top 10 Characters", VOY has twice as many speaking characters as TOS, and they have a lot more to say too. I would therefore conclude that in VOY, more of the minor characters with speaking roles are male, than in TOS.
+<br><br>
+
+### Characters and lines by gender, by season
+
+The gender ratio per season is found similarly to the method shown above, except that an additional outer for-loop is needed to run through the series' dataframe several times, season by season.
+
+To find the gender ratio for characters:
+<br>
+
+```python
+dataframe = tos_df
+
+seasons = list(dataframe['Season'].unique())
+char_gender_seasons = np.empty(len(seasons), dtype=dict)
+male, female, neutral = [], [], []
+
+for seasonnumber, season in enumerate(seasons):
+    char_gender = {'m': [], 'f': [], 'n': []}
+    for i in dataframe.index:
+        if dataframe['Season'][i] == season:
+            if dataframe['Gender'][i] == 'm':
+                char_gender['m'].append(dataframe['Character'][i])
+            elif dataframe['Gender'][i] == 'f':
+                char_gender['f'].append(dataframe['Character'][i])
+            elif dataframe['Gender'][i] == 'n':
+                char_gender['n'].append(dataframe['Character'][i])
+    char_gender_seasons[seasonnumber] = char_gender
+    male.append(len(np.unique(char_gender['m'])))
+    female.append(len(np.unique(char_gender['f'])))
+    neutral.append(len(np.unique(char_gender['n'])))
+```
+
+<br>
+To visualize the result as a bar chart:
+<br><br>
+
+```python
+series = 'The Original Series (TOS)'
+
+fig, ax = plt.subplots()
+x  = np.arange(len(seasons))
+ax.bar(x - 0.2, male, 0.2, label='male', color='#0471CE')
+ax.bar(x + 0, female, 0.2, label='female', color='#E52222')
+ax.bar(x + 0.2, neutral, 0.2, label='neutral', color='#BBBBBB')
+ax.set_ylabel('Number of characters with dialogue')
+ax.set_xticks(x)
+ax.set_xticklabels(seasons)
+ax.legend()
+ax.set_title(f'Characters by gender, by season, for {series}')
+plt.show()
+```
+
+<br>
+<table>
+    <tr>
+        <td>
+            <img src='https://raw.githubusercontent.com/BirkoRuzicka/blob/main/images/tos_characters_time.png'>
+        </td>
+        <td>
+            <img src='https://raw.githubusercontent.com/BirkoRuzicka/blob/main/images/voy_characters_time.png'>
+        </td>
+    </tr>
+</table>
+
+<br>
+The method for finding the gender ratio for lines is analogous and results in this:
+<br><br>
+
+<table>
+    <tr>
+        <td>
+            <img src='https://raw.githubusercontent.com/BirkoRuzicka/blob/main/images/tos_lines_time.png'>
+        </td>
+        <td>
+            <img src='https://raw.githubusercontent.com/BirkoRuzicka/blob/main/images/voy_lines_time.png'>
+        </td>
+    </tr>
+</table>
+
+<br>
+## 4. Analysis of gender across all series with time
+<a id="part4"></a>
+
+Finally, the most exciting part: A time series of gender^ ratios for all series of the Star Trek canon. (Please note: In the following steps I focussed on male and female characters and left out the genderneutral ones, mainly because they are regrettably low in number. I did this in an effort to produce plots that are simpler to understand, with no intention to be dismissive of any gender)
+
+To tackle this, I first concatenated all series' dataframes into one massive dataframe `st_df`, in which each row represents one episode (760 episodes total). For each episode, I summed up the characters and linecounts based on gender.
+
+Then I added additional columns, which are computationally derived from the existing ones:
+* `Char_total` (sum of all characters with speaking roles for the episode)
+* `Char_m_rel`, `Char_f_rel` (ratio of male and female characters, relative to Char_total)
+and, analogous to characters:
+* `Lines_total`
+* `Lines_m_rel`, `Lines_f_rel`
+
+<br>
+
+```python
+# plot gender-ratio of characters, for each episode
+fig, ax = plt.subplots()
+ax.plot(st_df['Airdate'], chars_m_rel, alpha=0.2, c='#0471CE')        # male data - blue
+ax.plot(st_df['Airdate'], st_df['Char_m_rel'], 'h', markersize=1.6,
+        label='male', c='#0471CE')
+ax.plot(st_df['Airdate'], chars_f_rel, alpha=0.2, c='#E52222')        # female data - red
+ax.plot(st_df['Airdate'], st_df['Char_f_rel'], 'h', markersize=1.6,
+        label='female', c='#E52222')
+ax.legend(loc=1)
+ax.set_xlabel("Year of episode's original air date (US)")
+ax.set_ylabel('% of characters per episode')
+ax.set_title('Development of characters per gender (%) with time')
+ax.set_ylim([-0.12, max(st_df['Char_m_rel']) + 0.12])
+plt.annotate('TOS', xy=(1967, -0.09))
+plt.annotate('TAS', xy=(1973, -0.09))
+plt.annotate('TNG', xy=(1990, -0.09))
+plt.annotate('DS9', xy=(1994, -0.09))
+plt.annotate('VOY', xy=(1998, -0.09))
+plt.annotate('ENT', xy=(2003, -0.09))
+plt.annotate('DIS', xy=(2016, -0.09))
+plt.annotate('PIC', xy=(2020, -0.09))
+plt.show()
+```
+<br>
+The result:
+<br><br>
+
+<table>
+    <tr>
+        <td>
+            <img src='https://raw.githubusercontent.com/BirkoRuzicka/blob/main/images/st_character_ratio_episodes.png', width=600>
+        </td>
+    </tr>
+</table>
+
+<br>
+Here we see that the ratio of male and female characters converge over time, and it appears that in the two youngest shows, gender parity in characters was achieved. 
+<br>
+
+This trend is even more distinct in lines per gender, shown below with trendlines for emphasis:
+<br>
+
+<table>
+    <tr>
+        <td>
+            <img src='https://raw.githubusercontent.com/BirkoRuzicka/blob/main/images/st_line_ratio_episodes.png', width=600>
+        </td>
+    </tr>
+</table>
 
 
 
