@@ -14,7 +14,7 @@ It is no secret that dialogue in movies and series has been unevenly distributed
 
 (both of which, by the way, are filled to the brim with beautiful Data Vizualisation graphics!)
 
-As a lifelong "trekkie", I was curious as to how this was handled within the **Star Trek** franchise, a notoriously socially progressive format whose plotlines are frequently driven by themes of morality and tolerance. Star Trek's numerous shows and movies, covering roughly 60 years of social development, also make it an ideal target for studies across time. 
+As a lifelong "trekkie", I was curious as to how this was handled within the **Star Trek** franchise, a notoriously socially progressive format whose plotlines are frequently driven by themes of morality, tolerance, and equality. Star Trek's numerous shows and movies, covering roughly 60 years of social development, also make it an ideal target for studies across time. 
 
 I analysed the transcripts of most Star Trek series for the ratio of male, female, and gender-neutral characters with speaking roles, as well as how many lines of dialogue are spoken by each gender. In particular, I focused on how this distribution changed over time. 
 
