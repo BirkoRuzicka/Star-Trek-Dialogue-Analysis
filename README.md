@@ -339,7 +339,7 @@ The method for finding the gender ratio for lines is analogous and results in th
 ## 4. Analysis of gender across all series with time
 <a id="part4"></a>
 
-Finally, the most exciting part: A time series of gender^ ratios for all series of the Star Trek canon. (Please note: In the following steps I focussed on male and female characters and left out the genderneutral ones, mainly because they are regrettably low in number. I did this in an effort to produce plots that are simpler to understand, with no intention to be dismissive of any gender)
+Finally, the most exciting part: A time series of gender ratios for all series of the Star Trek canon. (Please note: In the following steps I focussed on male and female characters and left out the genderneutral ones, mainly because they are regrettably low in number. I did this in an effort to produce plots that are simpler to understand, with no intention to be dismissive of any gender)
 
 To tackle this, I first concatenated all series' dataframes into one massive dataframe `st_df`, in which each row represents one episode (760 episodes total). For each episode, I summed up the characters and linecounts based on gender.
 
