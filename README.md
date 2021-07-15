@@ -189,16 +189,8 @@ plt.pie([char_m, char_f, char_n],
 Some results:
 <br><br>
 
-<table>
-    <tr>
-        <td>
-            <img src='https://raw.githubusercontent.com/BirkoRuzicka/blob/main/images/tos_characters2.png', width=300>
-        </td>
-        <td>
-            <img src='https://raw.githubusercontent.com/BirkoRuzicka/blob/main/images/voy_characters2.png', width=294>
-        </td>
-    </tr>
-</table>
+<img src='/images/tos_characters2.png' width=300> &emsp;&emsp;&emsp;&emsp; <img src='/images/voy_characters2.png' width=294>
+        
 
 <br>
 
@@ -227,16 +219,8 @@ plt.pie([lines_by_gender['m'], lines_by_gender['f'], lines_by_gender['n']],
 The resulting pie charts:
 <br><br>
 
-<table>
-    <tr>
-        <td>
-            <img src='https://raw.githubusercontent.com/BirkoRuzicka/blob/main/images/tos_lines2.png', width=300>
-        </td>
-        <td>
-            <img src='https://raw.githubusercontent.com/BirkoRuzicka/blob/main/images/voy_lines2.png', width=317>
-        </td>
-    </tr>
-</table>
+<img src='images/tos_lines2.png' width=300> &emsp;&emsp;&emsp;&emsp; <img src='images/voy_lines2.png' width=317>
+        
 
 <br>
 Okay, some improvement there.
@@ -335,31 +319,18 @@ plt.show()
 ```
 
 <br>
-<table>
-    <tr>
-        <td>
-            <img src='https://raw.githubusercontent.com/BirkoRuzicka/blob/main/images/tos_characters_time.png'>
-        </td>
-        <td>
-            <img src='https://raw.githubusercontent.com/BirkoRuzicka/blob/main/images/voy_characters_time.png'>
-        </td>
-    </tr>
-</table>
+
+<img src='images/tos_characters_time.png' width=450px> &emsp;&emsp;
+<img src='images/voy_characters_time.png' width=450px>
+        
 
 <br>
 The method for finding the gender ratio for lines is analogous and results in this:
 <br><br>
 
-<table>
-    <tr>
-        <td>
-            <img src='https://raw.githubusercontent.com/BirkoRuzicka/blob/main/images/tos_lines_time.png'>
-        </td>
-        <td>
-            <img src='https://raw.githubusercontent.com/BirkoRuzicka/blob/main/images/voy_lines_time.png'>
-        </td>
-    </tr>
-</table>
+<img src='images/tos_lines_time.png' width=450px> &emsp;&emsp;
+<img src='images/voy_lines_time.png' width=450px>
+        
 
 <br>
 
@@ -407,13 +378,8 @@ plt.show()
 The result:
 <br><br>
 
-<table>
-    <tr>
-        <td>
-            <img src='https://raw.githubusercontent.com/BirkoRuzicka/blob/main/images/st_character_ratio_episodes.png', width=600>
-        </td>
-    </tr>
-</table>
+<img src='images/st_character_ratio_episodes.png' width=600>
+        
 
 <br>
 Here we see that the ratio of male and female characters converge over time, and it appears that in the two youngest shows, gender parity in characters was achieved. 
@@ -422,13 +388,8 @@ Here we see that the ratio of male and female characters converge over time, and
 This trend is even more distinct in lines per gender, shown below with trendlines for emphasis:
 <br>
 
-<table>
-    <tr>
-        <td>
-            <img src='https://raw.githubusercontent.com/BirkoRuzicka/blob/main/images/st_line_ratio_episodes.png', width=600>
-        </td>
-    </tr>
-</table>
+<img src='images/st_line_ratio_episodes.png' width=600>
+        
 
 
 
