@@ -45,9 +45,9 @@ The main steps in this analysis were:
 ## 1. Collecting and preparing the data 
 <a id="part1"></a>
 
-I initially was inspired by, and worked from, a dataset of "Star Trek Scripts" from Kaggle ([Source 3](#Bibliography)). While working with this data, however, I noticed some issues that required extensive cleaning, and some issues that I was unable to correct at all. Furthermore, having been created several years ago, the dataset did not include the most recent Star Trek series "Discovery" and "Picard" (which, spoiler!, have turned out to be pivotal to my analysis).
+I initially was inspired by, and worked from, a dataset of "Star Trek Scripts" from Kaggle ([Source 3](#Bibliography)). While working with this data, however, I noticed some issues that required extensive cleaning, and some issues that I was unable to correct at all. Furthermore, having been created several years ago, the dataset did not include the most recent Star Trek series "Discovery" and "Picard" (which, spoiler!, have turned out to be pivotal here).
 
-So, in a fit of perfectionism, I wrote my own Python webscraping algorithm to fetch the transcripts to transform the text into a clean, ready-to-use dataset in JSON format. The JSON file and the algorithm are available [in this GitHub repository](https://github.com/BirkoRuzicka/Star-Trek-Transcripts).
+So, in a fit of perfectionism, I wrote my own Python webscraping algorithm to fetch the transcripts and transform the text into a clean, ready-to-use dataset in JSON format. The JSON file and the algorithm are available [in this GitHub repository](https://github.com/BirkoRuzicka/Star-Trek-Transcripts).
 
 (***A note on code in this notebook:***
 *the examples of code I show here are not intended to represent a fully working model of my analysis, but rather to illustrate concepts. The full code is available on GitHub, please use this if you intend to recreate any of my work!*)
