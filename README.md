@@ -18,7 +18,7 @@ As a lifelong "trekkie", I was curious as to how this was handled within the **S
 
 I analysed the transcripts of most Star Trek series for the ratio of male, female, and gender-neutral characters with speaking roles, as well as how many lines of dialogue are spoken by each gender. In particular, I focused on how this distribution changed over time. 
 
-These are the series I included in the study:
+These are the series I included in the project:
 
 |title                               | abbreviation |&emsp; originally aired|
 :------------------------------------| ------------ | ---------------------:|
@@ -114,7 +114,7 @@ ___
 
 *Rarely in Star Trek is a character's gender explicitly stated on screen, except for episodes that expressly deal with gender. Notable examples of such episodes include "The Outcast" (TNG, season 5, episode 17), "Cogenitor" (ENT, season 2, episode 22), and Adira Tal's plotline (DIS, season 3). Much could and should be said about gender expression in Star Trek, but that is not the scope of this project. If anyone reading this feels the calling to expand on the topic, I fiercely encourage you to get in touch with me!*
 
-*For the purpose of this study, I assigned characters the gender which they were expressing to the viewer. In almost every case, I found the characters' gender expression to be stereotypical, sometimes to an amusing degree. However, in the few ambiguous cases I relied on how the character referred to themselves or was referred to by another in dialogue, as well as background knowledge on the character. For example:*
+*For the purpose of this project, I assigned characters the gender which they were expressing to the viewer. In almost every case, I found the characters' gender expression to be stereotypical, sometimes to an amusing degree. However, in the few ambiguous cases I relied on how the character referred to themselves or was referred to by another in dialogue, as well as background knowledge on the character. For example:*
 
 *- the ship's computer generally speaks in a female-coded voice (fellow trekkies will know that it was indeed the voice of Majel Barret, the wife of Gene Roddenberry himself). However, the computer never expresses gender, nor is it ever addressed as anything other than "it", so I classified it as genderneutral*
 
