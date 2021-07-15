@@ -105,7 +105,9 @@ To illustrate the scale of this endeavour:
 |character count |229| 49|419|362|385|211| 74| 33|
 
 <br>
+
 ___
+
 ***\* A note on "gender" in this study***
 
 *Rarely in Star Trek is a character's gender explicitly stated on screen, except for episodes that expressly deal with gender. Notable examples of such episodes include "The Outcast" (TNG, season 5, episode 17) and "Cogenitor" (ENT, season 2, episode 22). Much could and should be said about gender expression in Star Trek, but that is not the scope of this project. If anyone reading this feels the calling to expand on this further, I fiercely encourage you to get in touch with me!*
@@ -243,21 +245,40 @@ Okay, some improvement there.
 ### Most loquacious characters
 <br>
 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;**TOS:** &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;**VOY:**
+<table>
+<tr><th>TOS</th><th>VOY</th></tr>
+<tr><td>
 
-        
-|character|lines overall|gender|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|character|lines overall|gender|
-|:--------|------------:|-----:|------------------------------------|:--------|------------:|-----:|
-|KIRK     |  9074       |    m |&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|JANEWAY  | 11717       | **f**|
-|SPOCK    |  4580       |    m |&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|EMH      |  5713       |    m |
-|MCCOY    |  2552       |    m |&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|CHAKOTAY |  5702       |    m |
-|SCOTT    |  1378       |    m |&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|PARIS    |  5110       |    m |
-|SULU     |   785       |    m |&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|TUVOK    |  4681       |    m |
-|UHURA    |   751       | **f**|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|KIM      |  4489       |    m |
-|CHEKOV   |   474       |    m |&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|TORRES   |  4483       | **f**|
-|PIKE     |   222       |    m |&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|SEVEN    |  4143       | **f**|
-|CHAPEL   |   194       | **f**|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|NEELIX   |  3297       |    m |
-|MUDD     |   150       |    m |&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|KES      |  1273       | **f**|
+|character|lines overall|gender|
+|:---     |         ---:|  ---:|
+|KIRK     |  9074       |    m |
+|SPOCK    |  4580       |    m |
+|MCCOY    |  2552       |    m |
+|SCOTT    |  1378       |    m |
+|SULU     |   785       |    m |
+|UHURA    |   751       | **f**|
+|CHEKOV   |   474       |    m |
+|PIKE     |   222       |    m |
+|CHAPEL   |   194       | **f**|
+|MUDD     |   150       |    m |
+
+</td><td>
+
+|character|lines overall|gender|
+|:---     |         ---:|  ---:|
+|JANEWAY  | 11717       | **f**|
+|EMH      |  5713       |    m |
+|CHAKOTAY |  5702       |    m |
+|PARIS    |  5110       |    m |
+|TUVOK    |  4681       |    m |
+|KIM      |  4489       |    m |
+|TORRES   |  4483       | **f**|
+|SEVEN    |  4143       | **f**|
+|NEELIX   |  3297       |    m |
+|KES      |  1273       | **f**|
+
+</td></tr> </table>
+
     
 <br>
 From this we see that in the their respective "Top 10 Characters", VOY has twice as many speaking characters as TOS, and they have a lot more to say too. I would therefore conclude that in VOY, more of the minor characters with speaking roles are male, than in TOS.
@@ -341,6 +362,7 @@ The method for finding the gender ratio for lines is analogous and results in th
 </table>
 
 <br>
+
 ## 4. Analysis of gender across all series with time
 <a id="part4"></a>
 
