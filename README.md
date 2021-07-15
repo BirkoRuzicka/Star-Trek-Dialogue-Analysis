@@ -110,7 +110,7 @@ ___
 
 ***\* A note on "gender" in this study***
 
-*Rarely in Star Trek is a character's gender explicitly stated on screen, except for episodes that expressly deal with gender. Notable examples of such episodes include "The Outcast" (TNG, season 5, episode 17) and "Cogenitor" (ENT, season 2, episode 22). Much could and should be said about gender expression in Star Trek, but that is not the scope of this project. If anyone reading this feels the calling to expand on this further, I fiercely encourage you to get in touch with me!*
+*Rarely in Star Trek is a character's gender explicitly stated on screen, except for episodes that expressly deal with gender. Notable examples of such episodes include "The Outcast" (TNG, season 5, episode 17), "Cogenitor" (ENT, season 2, episode 22), and Adira Tal's plotline (DIS, season 3). Much could and should be said about gender expression in Star Trek, but that is not the scope of this project. If anyone reading this feels the calling to expand on the topic, I fiercely encourage you to get in touch with me!*
 
 *For the purpose of this study, I assigned characters the gender which they were expressing to the viewer. In almost every case, I found the characters' gender expression to be stereotypical, sometimes to an amusing degree. However, in the few ambiguous cases I relied on how the character referred to themselves or was referred to by another in dialogue, as well as background knowledge on the character. For example:*
 
