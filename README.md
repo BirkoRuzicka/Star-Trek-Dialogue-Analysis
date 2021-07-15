@@ -53,7 +53,7 @@ So, in a fit of perfectionism, I wrote my own Python webscraping algorithm to fe
 *the examples of code I show here are not intended to represent a fully working model of my analysis, but rather to illustrate concepts. The full code is available in this repository as a .py file, please use this if you intend to recreate any of my work!*)
 
 
-To begin the analysis, the contents of the JSON file are read into a Pandas dataframe. To prevent the code from being unnecessarily complex, I did this series-by-series. I will now show the code for creating the "TOS" segment of the dataframe:
+To begin the analysis, the contents of the JSON file are read into a Pandas dataframe. To prevent the code from being unnecessarily complex, I did this series-by-series. For example, this is the code for creating the "TOS" segment of the dataframe:
 
 ```python
 import json
@@ -73,7 +73,7 @@ tos_df.columns = ['Episode', 'Character', 'Lines']
 ```
 
 <br>
-The dataframe now contains every line ever spoken on "TOS", so in the next step I removed all entries for 'minor characters' who have less than 10 lines of dialogue per episode. This reduces noise and lowers the overall workload in the next step.
+This dataframe contains every line ever spoken on "TOS". In the next step I removed all entries for 'minor characters' who have less than 10 lines of dialogue per episode. This reduces noise and lowers the overall workload in the next step.
 <br>
 <br>
 
