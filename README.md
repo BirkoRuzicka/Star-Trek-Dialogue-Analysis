@@ -3,7 +3,7 @@
 **A statistical analysis of episode transcripts, by Dr. Birko-Katarina Ruzicka**
 
 <br>
-<img src="https://raw.githubusercontent.com/BirkoRuzicka/Star-Trek-Dialogue-Analysis/main/images/st_line_ratio_episodes_glowing.png?token=ATGKR3V5W5IV4KY67CSNYFLA6BKVY", width="700px">
+<img src="https://github.com/BirkoRuzicka/Star-Trek-Dialogue-Analysis/blob/main/images/st_line_ratio_episodes_glowing.png?raw=true">
 <br>
 
 ## Motivation
@@ -392,9 +392,73 @@ Here we see that the ratio of male and female characters converge over time, and
 <br><br>
 
 The <a href='https://raw.githubusercontent.com/BirkoRuzicka/Star-Trek-Dialogue-Analysis/main/images/st_line_ratio_episodes_glowing.png?token=ATGKR3V5W5IV4KY67CSNYFLA6BKVY'>title image</a> is a prettier visualization of the same data, achieved through gaussian line-smoothing and some plot styling in Matplotlib:
+<br>
 
+```python
+# smoothed data
+M = np.array(st_df['Lines_m_rel'])
+F = np.array(st_df['Lines_f_rel'])
+M_smooth = gaussian_filter1d(M, sigma=3.5)
+F_smooth = gaussian_filter1d(F, sigma=3.5)
 
+fig, ax = plt.subplots(figsize=(8, 5))
 
+# glow effect
+for n in range(1, 10):
+    ax.plot(st_df['Airdate'], M_smooth,
+            linewidth=2 + n, alpha=0.03, color='#0477D9')
+    ax.plot(st_df['Airdate'], F_smooth,
+            linewidth=2 + n, alpha=0.03, color='#EB2323')
+
+ax.plot(st_df['Airdate'], M_smooth, c='#0471CE')
+ax.plot(st_df['Airdate'], F_smooth, c='#E52222')
+
+# axis properties
+ax.set_title('LINES PER GENDER IN STAR TREK SERIES',
+             font='Federation', size=24, color='#FEB54C')
+ax.set_xlabel("episode's original air date (US)")
+ax.set_ylabel('')
+ax.set_ylim([-0.12, max(st_df['Lines_m_rel']) + 0.12])
+ax.set_yticks([0.0, 0.2, 0.4, 0.6, 0.8, 1.0])
+ax.set_yticklabels(['0 %', '20 %', '40 %', '60 %', '80 %', '100 %'])
+
+# text labels
+plt.annotate('male', xy=(1978, 0.89), color='#0471CE', size=14)
+plt.annotate('female', xy=(1977, 0.06), color='#E52222', size=14)
+plt.annotate('TOS', xy=(1967, -0.09), color='#FEB54C')
+plt.annotate('TAS', xy=(1973, -0.09), color='#FEB54C')
+plt.annotate('TNG', xy=(1990, -0.09), color='#FEB54C')
+plt.annotate('DS9', xy=(1994, -0.09), color='#FEB54C')
+plt.annotate('VOY', xy=(1998, -0.09), color='#FEB54C')
+plt.annotate('ENT', xy=(2003, -0.09), color='#FEB54C')
+plt.annotate('DIS', xy=(2016, -0.09), color='#FEB54C')
+plt.annotate('PIC', xy=(2020, -0.09), color='#FEB54C')
+
+# plot styling:
+plt.style.use('dark_background')
+
+for param in ['text.color', 'axes.labelcolor', 'xtick.color', 'ytick.color']:
+    plt.rcParams[param] = '0.8'  # adjust text color
+
+for param in ['figure.facecolor', 'axes.facecolor']:
+    plt.rcParams[param] = '#080A0D'  # adjust background color
+
+plt.rcParams['font.family'] = 'Verdana'  # adjust font
+plt.rcParams['font.size'] = 11  # adjust font size
+
+plt.show()
+```
+
+<br><br>
+Credit for plot styling components:
+<br>
+
+**Font:** ['Federation classic' free font](https://www.dafont.com/federation-classic.font)
+
+**Glow effect:** [Cyberpunk Style with Matplotlib](https://towardsdatascience.com/cyberpunk-style-with-matplotlib-f47404c9d4c5)
+
+<br><br>
+___
 
 ## Bibliography
 <a id="bibliography"></a>
