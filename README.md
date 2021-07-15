@@ -195,7 +195,7 @@ Some results:
             <img src='https://raw.githubusercontent.com/BirkoRuzicka/blob/main/images/tos_characters2.png', width=300>
         </td>
         <td>
-            <img src='https://raw.githubusercontent.com/BirkoRuzicka/blob/main/images/voy_characters2.png', width=300>
+            <img src='https://raw.githubusercontent.com/BirkoRuzicka/blob/main/images/voy_characters2.png', width=294>
         </td>
     </tr>
 </table>
@@ -233,7 +233,7 @@ The resulting pie charts:
             <img src='https://raw.githubusercontent.com/BirkoRuzicka/blob/main/images/tos_lines2.png', width=300>
         </td>
         <td>
-            <img src='https://raw.githubusercontent.com/BirkoRuzicka/blob/main/images/voy_lines2.png', width=300>
+            <img src='https://raw.githubusercontent.com/BirkoRuzicka/blob/main/images/voy_lines2.png', width=317>
         </td>
     </tr>
 </table>
