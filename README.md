@@ -385,7 +385,7 @@ The result:
 
 <br>
 Here we see that the ratio of male and female characters converge over time, and it appears that in the two youngest shows, gender parity in characters was achieved. This trend is even more distinct in lines per gender, shown below with trendlines for emphasis.
-<br>
+<br><br>
 
 <img src='images/st_line_ratio_episodes.png' width=600>
         
