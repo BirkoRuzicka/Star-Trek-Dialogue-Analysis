@@ -1,5 +1,5 @@
 # Gender in „Star Trek“ dialogue and characters 
-
+<a id="title"></a>
 **A statistical analysis of episode transcripts, by Dr. Birko-Katarina Ruzicka**
 
 <br>
@@ -391,7 +391,7 @@ Here we see that the ratio of male and female characters converge over time, and
         
 <br><br>
 
-The <a href='https://raw.githubusercontent.com/BirkoRuzicka/Star-Trek-Dialogue-Analysis/main/images/st_line_ratio_episodes_glowing.png?token=ATGKR3V5W5IV4KY67CSNYFLA6BKVY'>title image</a> is a prettier visualization of the same data, achieved through gaussian line-smoothing and some plot styling in Matplotlib:
+The [title image](#title) is a prettier visualization of the same data, achieved through gaussian line-smoothing and some plot styling in Matplotlib:
 <br>
 
 ```python
