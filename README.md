@@ -3,6 +3,8 @@
 **A statistical analysis of episode transcripts, by Dr. Birko-Katarina Ruzicka**
 
 <br>
+<img src="https://raw.githubusercontent.com/BirkoRuzicka/Star-Trek-Dialogue-Analysis/main/images/st_line_ratio_episodes_glowing.png?token=ATGKR3V5W5IV4KY67CSNYFLA6BKVY", width="700px">
+<br>
 
 ## Motivation
 
@@ -344,7 +346,7 @@ To tackle this, I first concatenated all series' dataframes into one massive dat
 Then I added additional columns, which are computationally derived from the existing ones:
 * `Char_total` (sum of all characters with speaking roles for the episode)
 * `Char_m_rel`, `Char_f_rel` (ratio of male and female characters, relative to Char_total)
-and, analogous to characters:
+<br>and, analogous to characters:
 * `Lines_total`
 * `Lines_m_rel`, `Lines_f_rel`
 
@@ -382,15 +384,14 @@ The result:
         
 
 <br>
-Here we see that the ratio of male and female characters converge over time, and it appears that in the two youngest shows, gender parity in characters was achieved. 
-<br>
-
-This trend is even more distinct in lines per gender, shown below with trendlines for emphasis:
+Here we see that the ratio of male and female characters converge over time, and it appears that in the two youngest shows, gender parity in characters was achieved. This trend is even more distinct in lines per gender, shown below with trendlines for emphasis.
 <br>
 
 <img src='images/st_line_ratio_episodes.png' width=600>
         
+<br><br>
 
+The <a href='https://raw.githubusercontent.com/BirkoRuzicka/Star-Trek-Dialogue-Analysis/main/images/st_line_ratio_episodes_glowing.png?token=ATGKR3V5W5IV4KY67CSNYFLA6BKVY'>title image</a> is a prettier visualization of the same data, achieved through gaussian line-smoothing and some plot styling in Matplotlib:
 
 
 
