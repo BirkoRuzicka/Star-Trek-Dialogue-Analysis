@@ -107,6 +107,8 @@ To illustrate the scale of this endeavour:
 |character count |229| 49|419|362|385|211| 74| 33|
 
 <br>
+(in total, that's 1832 characters to be considered)
+<br>
 
 ___
 
