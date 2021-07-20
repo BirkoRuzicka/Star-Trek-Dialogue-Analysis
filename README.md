@@ -8,7 +8,7 @@
 
 ## Motivation
 
-It is no secret that dialogue in movies and series has been unevenly distributed between genders this far ([Source 1](#bibliography)), although surprisingly few studies have been conducted on the matter so far, and even fewer were published in peer-reviewed journals. Rare and beautiful examples for what could be done include 
+It is no secret that dialogue in movies and series has been unevenly distributed between genders this far ([Source 1](#bibliography)), although surprisingly few studies have been conducted on the matter as of yet, and even fewer were published in peer-reviewed journals. Rare and beautiful examples for what could be done include 
 * the outstanding work by Anderson and Daniels titled "Film Dialogue from 2,000 screenplays, Broken Down by Gender and Age" ([Source 1](#bibliography)), and 
 * T. Bowe's "Stargate SG1 Dialogue Text Analysis" ([Source 2](#bibliography)), in which he thoroughly analyses dialogue by character, speech content, and positive vs. negative sentiment across five seasons of a sci-fi show. 
 
