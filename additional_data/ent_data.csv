@@ -1,0 +1,98 @@
+Episode;Season;Year;Title
+ent_000;ent_s1;2001;Broken Bow
+ent_001;ent_s1;2001;Fight or Flight
+ent_002;ent_s1;2001;Strange New World
+ent_003;ent_s1;2001;Unexpected
+ent_004;ent_s1;2001;Terra Nova
+ent_005;ent_s1;2001;The Andorian Incident
+ent_006;ent_s1;2001;Breaking the Ice
+ent_007;ent_s1;2001;Civilization
+ent_008;ent_s1;2001;Fortunate Son
+ent_009;ent_s1;2001;Cold Front
+ent_010;ent_s1;2002;Silent Enemy
+ent_011;ent_s1;2002;Dear Doctor
+ent_012;ent_s1;2002;Sleeping Dogs
+ent_013;ent_s1;2002;Shadows of P'Jem
+ent_014;ent_s1;2002;Shuttlepod One
+ent_015;ent_s1;2002;Fusion
+ent_016;ent_s1;2002;Rogue Planet
+ent_017;ent_s1;2002;Acquisition
+ent_018;ent_s1;2002;Oasis
+ent_019;ent_s1;2002;Detained
+ent_020;ent_s1;2002;Vox Sola
+ent_021;ent_s1;2002;Fallen Hero
+ent_022;ent_s1;2002;Desert Crossing
+ent_023;ent_s1;2002;Two Days and Two Nights
+ent_024;ent_s1;2002;Shockwave, Part I
+ent_025;ent_s2;2002;Shockwave, Part II
+ent_026;ent_s2;2002;Carbon Creek
+ent_027;ent_s2;2002;Minefield
+ent_028;ent_s2;2002;Dead Stop
+ent_029;ent_s2;2002;A Night in Sickbay
+ent_030;ent_s2;2002;Marauders
+ent_031;ent_s2;2002;The Seventh
+ent_032;ent_s2;2002;The Communicator
+ent_033;ent_s2;2002;Singularity
+ent_034;ent_s2;2002;Vanishing Point
+ent_035;ent_s2;2002;Precious Cargo
+ent_036;ent_s2;2002;The Catwalk
+ent_037;ent_s2;2003;Dawn
+ent_038;ent_s2;2003;Stigma
+ent_039;ent_s2;2003;Cease Fire
+ent_040;ent_s2;2003;Future Tense
+ent_041;ent_s2;2003;Canamar
+ent_042;ent_s2;2003;The Crossing
+ent_043;ent_s2;2003;Judgement
+ent_044;ent_s2;2003;Horizon
+ent_045;ent_s2;2003;The Breach
+ent_046;ent_s2;2003;Cogenitor
+ent_047;ent_s2;2003;Regeneration
+ent_048;ent_s2;2003;First Flight
+ent_049;ent_s2;2003;Bounty
+ent_050;ent_s3;2003;The Expanse
+ent_051;ent_s3;2003;The Xindi
+ent_052;ent_s3;2003;Anomaly
+ent_053;ent_s3;2003;Extinktion
+ent_054;ent_s3;2003;Rajiin
+ent_055;ent_s3;2003;Impulse
+ent_056;ent_s3;2003;Exile
+ent_057;ent_s3;2003;The Shipment
+ent_058;ent_s3;2003;Twilight
+ent_059;ent_s3;2003;North Star
+ent_060;ent_s3;2003;Similitude
+ent_061;ent_s3;2003;Carpenter Street
+ent_062;ent_s3;2004;Chosen Realm
+ent_063;ent_s3;2004;Proving Ground
+ent_064;ent_s3;2004;Stratagem
+ent_065;ent_s3;2004;Harbinger
+ent_066;ent_s3;2004;Doctor's Orders
+ent_067;ent_s3;2004;Hatchery
+ent_068;ent_s3;2004;Azati Prime
+ent_069;ent_s3;2004;Damage
+ent_070;ent_s3;2004;The Forgotten
+ent_071;ent_s3;2004;E2
+ent_072;ent_s3;2004;The Council
+ent_073;ent_s3;2004;Countdown
+ent_074;ent_s3;2004;Zero Hour
+ent_075;ent_s4;2004;Storm Front, Part I
+ent_076;ent_s4;2004;Storm Front, Part II
+ent_077;ent_s4;2004;Home
+ent_078;ent_s4;2004;Borderland
+ent_079;ent_s4;2004;Cold Station 12
+ent_080;ent_s4;2004;The Augments
+ent_081;ent_s4;2004;The Forge
+ent_082;ent_s4;2004;Awakening
+ent_083;ent_s4;2004;Kir'Shara
+ent_084;ent_s4;2005;Daedalus
+ent_085;ent_s4;2005;Observer Effect
+ent_086;ent_s4;2005;Babel One
+ent_087;ent_s4;2005;United
+ent_088;ent_s4;2005;The Aenar
+ent_089;ent_s4;2005;Affliction
+ent_090;ent_s4;2005;Divergence
+ent_091;ent_s4;2005;Bound
+ent_092;ent_s4;2005;In a Mirror, Darkly, Part I
+ent_093;ent_s4;2005;In a Mirror, Darkly, Part II
+ent_094;ent_s4;2005;Demons
+ent_095;ent_s4;2005;Terra Prime
+ent_096;ent_s4;2005;These Are The Voyages…
